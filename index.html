@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link id="page_favicon" href="/favicon.ico" rel="icon" type="image/x-icon" />
+	<title>Zander Milroy</title>
+	<style type="text/css">
+		* {
+			margin:0;
+			padding:0;
+		}
+
+		html, body {
+			height:100%;
+			background: #111111;
+		}
+
+		#outer[id] { /* For IE */
+			display: table;
+			position: static;
+		}
+
+		#outer {
+			height: 100%;
+			position: relative;
+			width: 100%;
+		}
+
+		#middle[id] { /* For IE */
+			display: table-cell;
+			vertical-align: middle;
+			position: static;
+		}
+
+		#middle {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+			text-align: center;
+		}
+		 
+		#container { /* For IE Still */
+			margin: 0 auto;
+			width: 300px;
+			min-width: 300px;
+			text-align:center;
+			font-family: Helvetica,Arial,Sans;
+			color: #aaaaaa;
+		}
+
+		#container {
+			position: relative;
+			top: -50%;
+			text-align: center;
+		}
+
+		img {
+			-webkit-border-radius: 6px;
+			-moz-border-radius: 6px;
+			border-radius: 6px;
+			opacity: 0.85;
+			margin: 8px;
+		}
+
+		h1 {
+			font-size: 2em;
+		}
+
+		h1 a {
+			text-decoration: none;
+			color: #bbbbbb;
+		}
+
+		h2 {
+			font-size: 0.8em;
+		}
+	</style>
+</head>
+	<body>
+		<div id="outer">
+			<div id="middle">
+				<div id="container">
+					<img src="http://gravatar.com/avatar/0a92e84ed47eac5204c85a8a531f0926.png" alt="onefifth" />
+					<h1><a href="https://twitter.com/onefifth">Zander Milroy</a></h1>
+					<h2>Designer, Developer, Dreamer</h2>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="jquery-1.7.2.min.js"><\/script>')</script>
+		<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-4661688-9']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+		</script>
+		<script type="text/javascript">
+			$(function() {
+				$("h1").on("mouseenter", function(event){
+					$(this).fadeOut(40, function(){
+						$(this).children("a").text("@onefifth").parent().fadeIn(200);
+					});
+				}).on("mouseleave", function(event){
+					$(this).fadeOut(42, function(){
+						$(this).children("a").text("Zander Milroy").parent().fadeIn(200);
+					});
+				});
+			});
+		</script>
+	</body>
+</html>
