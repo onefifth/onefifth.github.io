@@ -1,0 +1,406 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    overflow-y: scroll;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+body {
+    background-color: #111;
+    color: #bbb;
+    font-family: Helvetica, Arial, Sans;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 12px 0 0 0;
+    min-width: 100%;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+header img {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    height: 80px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#main_navigation {
+    padding: 0;
+    margin: 5px 0 0 0;
+    list-style: none;
+}
+
+#main_navigation li {
+    font-weight: bold;
+}
+
+#main_navigation li a:link,a:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 4px 0 4px 0;
+    display: block;
+    color: #bbb;
+}
+
+span.hiddenmsg::selection {
+    color: #d30000;
+}
+
+#content {
+
+}
+
+#content .section {
+    position: relative;
+    background-color: #eee;
+    margin: 0 0 -8px 0;
+    padding: 0;
+    width: 300px;
+    max-height: 100px;
+    overflow: hidden;
+
+    box-shadow: 0px -2px 1px #000;
+
+    -webkit-transition: max-height 0.3s ease-in-out, -webkit-transform 0.3s;
+    transition: max-height 0.3s ease-in-out, transform 0.3s;
+}
+
+#content .section.opened {
+    max-height: 3000px;
+}
+
+#content .section img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+#content .section a::after {
+    content: "";
+    height: 20px;
+    width: 100%;
+    margin-top: -20px;
+    position: absolute;
+
+    background: -webkit-linear-gradient(top,
+                rgba(238,238,238,0) 0%,
+                rgba(238,238,238,0) 10%,
+                rgba(238,238,238,0.3) 50%,
+                rgba(238,238,238,1) 100%
+    );
+}
+
+#content .title {
+    position: absolute;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 5px;
+    text-shadow: 2px 2px #111;
+    top: -4px;
+    color: #ddd;
+}
+
+#content.hovers .section .title {
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0.75;
+}
+
+#content.hovers .section:hover .title {
+    opacity: 1;
+}
+
+#content .subtitle {
+    position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    width: 300px;
+    padding: 2px 0 2px 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Consolas;
+    color: #ddd;
+    top: 35px;
+}
+
+#content.hovers .subtitle {
+    -webkit-transition: left 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
+    left: -350px;
+}
+
+#content .section:hover .subtitle {
+    left: 0px;
+}
+
+#content .section.opened .subtitle {
+    left: 0;
+}
+
+#content .description {
+    color: #000;
+    padding: 1em;
+}
+
+#content .section.light {
+    /*border-color: #111;*/
+}
+
+#content .section.light .title {
+    color: #333;
+    text-shadow: 1px 1px #bbb;
+}
+
+footer {
+    color: #444;
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 300px) {
+
+    header {
+        width: 300px;
+        min-width: 300px;
+    }
+
+    #main_navigation {
+        margin: 10px;
+    }
+
+    #content .section {
+        width: 100%;
+    }
+
+    #content .section img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    #main_navigation li {
+        display: inline-block;
+    }
+
+    #main_navigation li a:link,a:visited {
+        display: inline-block;
+        padding: 6px;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    #content .section {
+        max-height: 140px;
+    }
+
+    #content .subtitle {
+        top: 45px;
+        width: 250px;
+    }
+
+    #content .title {
+        font-size: 2em;
+    }
+
+    #content .section img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+    }
+
+    footer {
+        min-height: 40px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    #content {
+        width: 900px;
+        margin: auto;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

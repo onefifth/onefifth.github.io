@@ -1,116 +1,172 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link id="page_favicon" href="/favicon.ico" rel="icon" type="image/x-icon" />
-	<title>Zander Milroy</title>
-	<style type="text/css">
-		* {
-			margin:0;
-			padding:0;
-		}
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Zander</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-		html, body {
-			height:100%;
-			background: #111111;
-		}
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/main.css">
 
-		#outer[id] { /* For IE */
-			display: table;
-			position: static;
-		}
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header>
+            <img src="http://gravatar.com/avatar/0a92e84ed47eac5204c85a8a531f0926.png" alt="onefifth">
+            <nav>
+                <ul id="main_navigation">
+                    <li><a href="https://twitter.com/onefifth">Twitter</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="ZanderMilroyResume.html">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
 
-		#outer {
-			height: 100%;
-			position: relative;
-			width: 100%;
-		}
+        <div id="content" class="clearfix">
+            <div id="coinsProject" class="section light">
+                <a href="#coins">
+                    <img src="img/CoinsBanner.png" unselectable="on" />
+                    <span class="title">Coins</span>
+                    <div class="subtitle">Sliding coin puzzle game for web, iOS and Android</div>
+                </a>
+                <div class="description">
+<span>Tools: AS3 + Adobe AIR Authoring tools</span>
+<p>
+Coins is a unique sliding coin puzzle game with a zen-like aesthetic. It was co-developed with Tim Dresser over the course of a few summer months in 2011 as an attempt to create a simple yet interesting mobile focused puzzle game and to gain some first hand experience publishing to the Apple and Android app stores.
+</p>
 
-		#middle[id] { /* For IE */
-			display: table-cell;
-			vertical-align: middle;
-			position: static;
-		}
+<p>
+<h3>The How and Why Ramble:</h3>
 
-		#middle {
-			position: absolute;
-			top: 50%;
-			width: 100%;
-			text-align: center;
-		}
-		 
-		#container { /* For IE Still */
-			margin: 0 auto;
-			width: 300px;
-			min-width: 300px;
-			text-align:center;
-			font-family: Helvetica,Arial,Sans;
-			color: #aaaaaa;
-		}
+For me, Coins was a large project in a lot of interesting ways. Tim and I tried all sorts of new things; built a sizeable rake build system including asset generation for different resolutions/platforms, hooked up a static code analyzer and formatter, even a preprocessor to give us compiler conditionals and consts in ActionScript. A lot of time was spent dealing with performance and the quirks of the Flash/AIR runtime as well as learning the ins and outs of packaging to a weird unfamiliar store using what were often unstable publishing/build technologies. When fonts wouldn’t render properly or consistently on iOS and Android, we tried a bitmap font solution before switching to FreeType to generate pngs of the limited text we needed in the game. We shipped the actual coin assets as 5 jpg textures and applied a tiny black and white png mask plus gray scale shadow at runtime to conserve bits. Used a runtime generated noisemap to create the watercolour effects and transitions. It’s a big list of weird things, but with a final .apk size of 3.8 megs and 4.x for iOS it certainly doesn’t look like a large project.
+</p>
+<p>
+The goal of trying to produce a game in a reasonably limited amount of time produced a bunch of constraints, including the fact that we wanted to make something completely from scratch on no real budget. We purchased a used MacBook and commissioned a close mutual friend of ours, Taylor Prost, two looping tracks (they are amazing) to compliment the 60 levels. Aside from that and seven stock textures (six backgrounds and one wood grain for the coins), every image and sound was created/recorded by us using a ton of free tools like Audacity, Gimp and Cygwin. Design wise the goals were simple; minimal rules, minimal text, fairly minimal visuals. Something accomplishable in our timeframe while still being a very polished finished product. I remember us sinking a lot of time into level design, trying to tune difficulty while sticking to this ideal that the solution to one level should be the starting position for the next. That was a really tricky thing to do at times, but I think it worked out pretty well.
+</p>
+<p>
+This project was a fantastic learning experience for me, and honestly I think the finished product is worth more recognition than it got on mobile. I feel I have a much better understanding for the role luck, connections and a reasonable marketing budget play in attracting players. At the time of writing this, I’m in the middle of attempting to move the whole code base over to Haxe + OpenFL and seeing if I could manage to release an updated version with some bugfixes and hopefully some performance improvements. It’s worth noting that in 2011, AIR was not capable of hardware accelerated graphics on mobile, also phone hardware was pretty bad. Getting Coins to run on the iPhone 3G (our only iOS test device at the time) was a crazy challenge. Currently it is unlisted on the iOS app store as it stopped being worth the $100 a month for developer licensing. Also picking the name “Coins” meant nobody could find the game. Worst SEO decision.
+</p>
+<p>
+<h3>Conclusions?</h3>
+I think everyone should do a project like this at least once. The biggest takeaways are always the things you learn about yourself and how you work.
 
-		#container {
-			position: relative;
-			top: -50%;
-			text-align: center;
-		}
+You can play Coins in a browser or on Android.
+</p>
+                </div>
+            </div>
+            <div id="floodfillProject" class="section light">
+                <a href="#floodfill">
+                    <img src="img/FloodFillBanner.png" />
+                    <span class="title">Flood Fill</span>
+                    <div class="subtitle">Colourful web-based puzzle toy</div>
+                </a>
+                <div class="description">
+<span>Tools: AS3 + Flash CS3</span>
+<p>
+Flood Fill is a simple, brightly coloured puzzle game inspired by colouring books and doodles. It was created as an entirely solo project in the summer of 2009 with the goals of completing a polished web game and earning some money through a Flash game sponsorship.
+</p>
+<p>
+<h3>The How and Why Ramble:</h3>
 
-		img {
-			-webkit-border-radius: 6px;
-			-moz-border-radius: 6px;
-			border-radius: 6px;
-			opacity: 0.85;
-			margin: 8px;
-		}
+I had been programming for a number of years at this point, but had never really released anything I would call a polished finished project. Flood Fill was quickly born from a desire to create something that’d fill this requirement. While it’s a clear example of simple graph theory and the 4-colour-theorem, Flood Fill’s design was originally inspired from children's doodles, where a scribble of lines would be slowly coloured in to form a checkerboard. I prototyped a pretty ugly version over a weekend, came to the conclusion through trial-and-error that I only needed 4 colours, and then spent about a week making levels with a difficulty curve and polishing the graphics/menus. A close friend of mine Taylor Prost composed a fantastically fitting jazzy puzzle background track and provided a few sound effects. Everything else was created by me using Flash CS3 and Inkscape.
+</p>
+<p>
+I wanted to this project to be traditionally “successful”, which at the time meant I wanted to make at least a dollar (woah, big dreams). Over a period of a year (starting before Flood Fill and well after) I spent a significant chunk of time on fgl.com interacting with the indie flash game developer world. I learned lots about distribution, advertising, business, what did well, what didn’t, and importantly about the two primary ways developers made money making flash games; in-game ads (as you’d expect) and sponsorships. Sponsorship of a Flash game is very similar to publishing in the rest of the industry except a sponsor is often a company running a site dedicated to hosting web-games who makes money from traffic. Because Flash games are often packaged as single-file .swfs, they spread easily and essentially serve as both advertisements for these sponsors as well as content for their sites. They buy the rights to have branding placed in-game and often ask for achievement/social APIs for their site to be integrated/in-game ads removed while on their domain(s) etc. Basically all the money in the flash game world is advertising money, the harsh reality is that almost zero users are willing to pay for content, especially content delivered through the browser. Flood Fill eventually found a paying sponsorship (a little over a thousand) and the game was subsequently released on web as well as the Blackberry Playbook a few months later.
+</p>
+<p>
+With a bit of money made, and a game released, things went quite well. The game received a few million plays and a lot of positive reviews across all versions, and even a number of business inquiries from companies wanting different versions for this or that (seriously like, airport charging stations and flash-enabled cable boxes? It was honestly a bit overwhelming). Most of these contracts unfortunately fell through and didn’t progress too much further than a few email exchanges, but it was exciting none the less. As a side-note, Kongregate ad revenue in particular turned out to be a really neat long-tail, eventually making more than the initial sponsorship (7 years later, I’m still getting ~15 bucks annually).
+</p>
+<p>
+Things eventually calmed down, but to my surprise this project wasn’t done teaching me things just yet. In April of 2010 it was brought to my attention that the game, visuals, colours, beginning levels, word-for-word instructions, basically all of it, had been re-created and released on the iOS App Store by an overseas company under a different name. They had racked up some surprisingly good rankings + installs and were charging for in-app purchases + running in-game ads. As an individual developer with basically no budget, there’s almost nothing you can do about this kind of a thing. After a few emails and zero support/response from Apple, eventually I got a denial from the iOS developer, followed by the sudden removal of the app from the store. This was soon followed by company re-branding and a re-upload of a new version with significantly more visual differentiation from Flood Fill. This version also appeared to do quite well. It sucked, I was grumpy about it, but there’s nothing you can do but learn from it. The take-away for me was that you should do your best to release on every platform that makes sense for you and your product. Always do your first launch to the best of your ability and be prepared to follow up opportunities that might arise.
+</p>
+<p>
+<h3>Conclusions?</h3>
+I learned a ton from this project. Aside from just AS3 experience and technical skills, I learned that Flash games weren't what I wanted to do forever, but they are extremely accessible from a distribution standpoint. I learned a lot about the web. I realized piracy sucks and you’ve basically just got to do what you can to mitigate it or don’t let it bother you (which can be hard). Most importantly I learned I that could make games. Maybe even ones that were good, and that’s all I think I really wanted.
 
-		h1 {
-			font-size: 2em;
-		}
+You can play Flood Fill in a browser or on the BlackBerry App Store.
+</p>
+                </div>
+            </div>
+            <div id="ukenProject" class="section">
+                <a href="#uken">
+                    <img src="img/UkenBanner.png" />
+                    <span class="title">Uken Games</span>
+                    <div class="subtitle">A few neato Unity and HTML projects!</div>
+                </a>
+                <div class="description">
+<span>Tools: Unity, Javascript + React, Ruby</span>
+<p>
+I spent 3 years at Uken Games working primarily on 3 projects including; Titans, a mobile F2P fusion card battler, Loot Quest, an iPad diablo-like dungeon crawler and Cloud Breakers, a strategic ship-enhancing formation battler.
+</p>
+                </div>
+            </div>
+            <div id="websiteProject" class="section">
+                <a href="#website">
+                    <img src="img/WebsiteBanner.png" />
+                    <span class="title">Hello World</span>
+                    <div class="subtitle">Personal portfolio and web space... so meta</div>
+                </a>
+                <div class="description">
+<span>Tools: HTML, JavaScript</span>
+<p>
+You're looking at it right now! This personal webspace and portfolio was developed over the course of a week with the intent of displaying the things I've worked on and created over the years and provide a spot to ramble about those projects in an honest, disorganized and hopefully interesting way.
+</p>
+                </div>
+            </div>
+        </div>
 
-		h1 a {
-			text-decoration: none;
-			color: #bbbbbb;
-		}
+        <footer>
+            <p>︻╦╤─ ~  sick website dude  ~ ─╤╦︻</p>
+        </footer>
 
-		h2 {
-			font-size: 0.8em;
-		}
-	</style>
-</head>
-	<body>
-		<div id="outer">
-			<div id="middle">
-				<div id="container">
-					<img src="http://gravatar.com/avatar/0a92e84ed47eac5204c85a8a531f0926.png" alt="onefifth" />
-					<h1><a href="https://twitter.com/onefifth">Zander Milroy</a></h1>
-					<h2>Designer, Developer, Dreamer</h2>
-				</div>
-			</div>
-		</div>
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="jquery-1.7.2.min.js"><\/script>')</script>
-		<script type="text/javascript">
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-4661688-9']);
-		  _gaq.push(['_trackPageview']);
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.2.0.min.js"><\/script>')</script>
 
-		  (function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
-		</script>
-		<script type="text/javascript">
-			$(function() {
-				$("h1").on("mouseenter", function(event){
-					$(this).fadeOut(40, function(){
-						$(this).children("a").text("@onefifth").parent().fadeIn(200);
-					});
-				}).on("mouseleave", function(event){
-					$(this).fadeOut(42, function(){
-						$(this).children("a").text("Zander Milroy").parent().fadeIn(200);
-					});
-				});
-			});
-		</script>
-	</body>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <script>
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-4661688-9']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+
+        <script>
+            $(function(){
+                if (window.location.hash) {
+                    var targetProject = $(window.location.hash + 'Project')
+                    targetProject.toggleClass('opened');
+                    $('body').delay(150).animate({
+                        scrollTop: targetProject.offset().top - 30 + 'px'
+                    }, 200);
+                }
+
+                if(!jQuery.support.touch && $("body").width() > 600){
+                    $("#content").addClass("hovers");
+                }
+
+                $("#content .section a").click(
+                    function(){
+                        $(this).parent().toggleClass("opened").siblings().removeClass("opened");
+                    }
+                );
+
+            });
+        </script>
+    </body>
 </html>
